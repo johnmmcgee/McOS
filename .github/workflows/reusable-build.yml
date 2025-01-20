@@ -109,7 +109,7 @@ jobs:
           containers: ${{ env.source_image }}:${{ env.source_tag }}
 
       - name: Maximize Build Space
-        uses: ublue-os/remove-unwanted-software@v7
+        uses: ublue-os/remove-unwanted-software@v8
 
       - name: Pull Images
         uses: Wandalen/wretry.action@v3.7.2
