@@ -173,7 +173,7 @@ jobs:
             digest=$(sudo skopeo inspect docker://${{ steps.registry_case.outputs.lowercase }}/${{ env.dest_image }}:${{ env.dest_tag }} --format '{{.Digest}}')
             echo "digest=${digest}" >> $GITHUB_OUTPUT
 
-      - uses: sigstore/cosign-installer@v3.7.0
+      - uses: sigstore/cosign-installer@v3.8.0
         if: github.event_name != 'pull_request'
 
       - name: Sign Container Image
